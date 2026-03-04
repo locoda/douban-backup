@@ -6,7 +6,7 @@ import { sleep } from './utils';
 
 dotenv.config();
 const neodbToken = process.env.NEODB_API_TOKEN;
-const neodbVisibility = Number.parseInt(process.env.NEODB_VISIBILITY || '2', 10) || 2;
+const neodbVisibility = Number(process.env.NEODB_VISIBILITY ?? 2);
 
 type NeodbItem = {
   id: string;
